@@ -1,0 +1,19 @@
+.card {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.card-title {
+  font-weight: 200px;
+}
+
+.card .card-content p.body {
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+  color: darkslategray;
+}
+
+.dates {
+  color: dimgray;
+  font-weight: 200;
+}

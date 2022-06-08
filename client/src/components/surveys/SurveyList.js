@@ -1,3 +1,5 @@
+import './surveyList.css';
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
@@ -5,6 +7,7 @@ import { fetchSurveys } from '../../actions';
 class SurveyList extends Component {
   componentDidMount() {
     this.props.fetchSurveys();
+    console.log(this.props.surveys)
   }
 
   renderSurveys() {
@@ -12,9 +15,12 @@ class SurveyList extends Component {
       return (
         <div className="card darken-1" key={survey._id}>
           <div className="card-content">
-            <span className="card-title">{survey.title}</span>
-            <p>{survey.body}</p>
-            <p className="right">Sent on: {new Date(survey.dateSent).toLocaleDateString()}</p>
+            <span className="card-title">{survey.title}:</span>
+            <p className="body">{survey.body}</p>
+            <div className="dates">
+              <p className="left">Sent on: {new Date(survey.dateSent).toLocaleDateString()}</p>
+              <p className="right">Last responded: {new Date(survey.lastResponded).toLocaleDateString()}</p>
+            </div>
           </div>
           <div className="card-action">
             <a>Yes: {survey.yes}</a>
