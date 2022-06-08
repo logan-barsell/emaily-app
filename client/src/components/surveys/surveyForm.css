@@ -1,0 +1,12 @@
+label {
+  color: white;
+}
+
+input:not([type]) {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+form {
+  margin: 30px 20px;
+}
