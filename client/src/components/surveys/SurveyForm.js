@@ -19,8 +19,10 @@ class SurveyForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)} autocomplete="off" >
+      <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)} autoComplete="off" >
         {this.renderFields()}
+        {/* HIDDEN INPUT TO TRICK CHROME INTO TURNING OFF AUTOCOMPLETE */}
+        <input type="text" autoComplete="on" value="" style={{ display: 'none', opacity: 0 }} readOnly={true} />
         <Link to="/surveys" className="red btn-flat white-text">
           Cancel
         </Link>

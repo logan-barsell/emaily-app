@@ -17,3 +17,7 @@
   color: dimgray;
   font-weight: 200;
 }
+
+.card-action {
+  text-align: center;
+}

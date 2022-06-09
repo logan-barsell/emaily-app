@@ -1,3 +1,5 @@
+import './surveyFormReview.css';
+
 import React from 'react';
 import { connect } from 'react-redux';
 import formFields from './formFields';
@@ -11,7 +13,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey }) => {
 
   const reviewFields = _.map(formFields, ({ label, name }) => {
     return (
-      <div key={name}>
+      <div className="entry" key={name}>
         <label>{label}</label>
         <div>
           {formValues[name]}
@@ -21,17 +23,20 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey }) => {
   });
 
   return (
-    <div>
-      <h5>Please confirm your entries</h5>
-      {reviewFields}
+    <div style={{ margin: "25px auto" }} >
+      <h5>Please confirm your entries: </h5>
+      <div className="entries">
+        {reviewFields}
+      </div>
+
       <button
-        className="yellow white-text darken-3 btn-flat"
+        className="red white-text btn-flat"
         onClick={onCancel}
       >
         Go Back
       </button>
       <button
-        className="green btn-flat right white-text"
+        className="teal btn right white-text"
         onClick={() => submitSurvey(formValues, navigate)}
       >
         Send Survey
