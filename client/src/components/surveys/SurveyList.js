@@ -3,6 +3,7 @@ import './surveyList.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
+import SurveyDelete from './SurveyDelete';
 
 class SurveyList extends Component {
   componentDidMount() {
@@ -15,7 +16,10 @@ class SurveyList extends Component {
       return (
         <div className="card darken-1" key={survey._id}>
           <div className="card-content">
-            <span className="card-title">{survey.title}:</span>
+            <span className="card-title">{survey.title}:
+              <SurveyDelete survey={survey} />
+            </span>
+
             <p className="body">{survey.body}</p>
             <div className="dates">
               <p className="left">Sent on: {new Date(survey.dateSent).toLocaleDateString()}</p>

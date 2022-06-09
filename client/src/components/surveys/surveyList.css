@@ -21,3 +21,12 @@
 .card-action {
   text-align: center;
 }
+
+i.delete {
+  color: darkslategrey;
+}
+
+i.delete:hover {
+  opacity: 0.7;
+  transition: 100ms;
+}
