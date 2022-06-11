@@ -1,8 +1,13 @@
 import './surveyDelete.css';
 
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
 import M from 'materialize-css';
+import { useNavigate } from 'react-router-dom';
+
+// const RootFunction = ({ survey }) => {
+//   const navigation = useNavigate();
+//   return <SurveyDelete navigation={navigation} survey={survey} />;
+// };
 
 class SurveyDelete extends Component {
 
@@ -12,6 +17,9 @@ class SurveyDelete extends Component {
   }
 
   modalId = `#${this.props.survey._id}`;
+  deleteRoute = `api/deleteSurvey/${this.props.survey._id}`;
+
+
 
   render() {
     return (
@@ -26,8 +34,19 @@ class SurveyDelete extends Component {
             <p>Are you sure?</p>
           </div>
           <div className="modal-footer">
-            <a href="#!" className="modal-close  btn-flat grey white-text">Cancel</a>
-            <a href="#!" className="modal-close btn-flat red white-text">Delete</a>
+            <a
+              href="#!"
+              className="modal-close  btn-flat grey white-text"
+
+            >
+              Cancel
+            </a>
+            <a
+              href={this.deleteRoute}
+              className="modal-close btn-flat red white-text"
+            >
+              Delete
+            </a>
           </div>
         </div>
       </>

@@ -12,17 +12,23 @@ const Survey = mongoose.model('surveys');
 
 module.exports = app => {
 
+  app.get('/api/deleteSurvey/:id', async (req, res) => {
+    await Survey.deleteOne({ _id: req.params.id });
+    console.log("HELLOOOOOOOOOO");
+    res.redirect('/surveys');
+  });
+
   app.get('/api/surveys/:surveyId/:choice', (req, res) => {
     res.send('Thanks for voting!');
   });
 
 
   app.post('/api/surveys/webhooks', (req, res) => {
-    const p = new Path('/api/surveys/:surveyId/:choice');
+    const webhookPath = new Path('/api/surveys/:surveyId/:choice');
 
     _.chain(req.body)
       .map(({ email, url }) => {
-        const match = p.test(new URL(url).pathname);
+        const match = webhookPath.test(new URL(url).pathname);
         if (match) {
           return { email, surveyId: match.surveyId, choice: match.choice };
         }
