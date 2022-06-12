@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Header from './Header';
+import Footer from './Footer';
 import Dashboard from './Dashboard';
 import Landing from './Landing';
 import SurveyNew from './surveys/SurveyNew';
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path="/surveys" element={<Dashboard />} exact />
             <Route path="/surveys/new" element={<SurveyNew />} />
           </Routes>
+          <Footer />
         </div>
       </BrowserRouter>
     );

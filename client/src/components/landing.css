@@ -1,0 +1,13 @@
+.landing {
+  text-align: center;
+  color: white;
+}
+
+.landing p {
+  color: powderblue;
+}
+
+.header img {
+  height: 65px;
+  margin-top: 50px;
+}

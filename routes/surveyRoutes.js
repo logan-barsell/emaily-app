@@ -14,7 +14,6 @@ module.exports = app => {
 
   app.get('/api/deleteSurvey/:id', async (req, res) => {
     await Survey.deleteOne({ _id: req.params.id });
-    console.log("HELLOOOOOOOOOO");
     res.redirect('/surveys');
   });
 
