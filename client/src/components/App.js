@@ -22,7 +22,7 @@ class App extends Component {
         <div className="container">
           <Header />
           <Routes>
-            <Route path="/" element={<Landing />} exact />
+            <Route path="/" element={this.props.auth ? <Dashboard /> : <Landing />} exact />
             <Route path="/surveys" element={<Dashboard />} exact />
             <Route path="/surveys/new" element={<SurveyNew />} />
           </Routes>
@@ -33,5 +33,9 @@ class App extends Component {
   }
 }
 
+function mapStateToProps({ auth }) {
+  return { auth };
+}
 
-export default connect(null, actions)(App);
+
+export default connect(mapStateToProps, actions)(App);

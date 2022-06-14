@@ -23,7 +23,9 @@ class SurveyList extends Component {
             <p className="body">{survey.body}</p>
             <div className="dates">
               <p className="left">Sent on: {new Date(survey.dateSent).toLocaleDateString()}</p>
-              <p className="right">Last responded: {new Date(survey.lastResponded).toLocaleDateString()}</p>
+              <p className="right">
+                Last responded:
+                {survey.lastResponded ? new Date(survey.lastResponded).toLocaleDateString() : ' Never'}</p>
             </div>
           </div>
           <div className="card-action">

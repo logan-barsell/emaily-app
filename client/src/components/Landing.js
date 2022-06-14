@@ -7,17 +7,18 @@ const Landing = () => {
 
 
       <div className="container">
-        <div className="header center"><img src="./mail.png" /></div>
+        <div className="header center"><img src="./mail.png" alt="email icon" /></div>
         <div className="row center">
           <h5 className="header col s12 light">Collect feedback from your users.</h5>
           <p>Send custom surveys to a list of recipients, then recieve their answers back on your dashboard!</p>
         </div>
         <div className="row center">
           <a
-            href="http://materializecss.com/getting-started.html"
+            href="/auth/google"
             id="download-button"
             className="btn-large waves-effect waves-light teal">
-            Log in with Google
+            <img className="googleBtn" src="./google.png" height="20px" width="20px" alt="google icon" />
+            Login with Google
           </a>
         </div>
       </div>

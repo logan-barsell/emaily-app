@@ -8,13 +8,19 @@ footer.page-footer {
 .steps {
   font-weight: 200;
 }
+.stepsSub {
+  margin-top: 15px;
+}
 
 .number {
   width: 20px;
   border-radius: 180px;
   background-color: indianred;
   margin: auto;
-  text-align: center;
+}
+
+.page-footer p {
+  margin-top: 6px;
 }
 
 .icon-attr {
@@ -27,4 +33,9 @@ footer.page-footer {
 
 .madeBy {
   color: indianred;
+}
+
+i.tiny {
+  position: absolute;
+  margin: -1px 0px 0px 3px;
 }
