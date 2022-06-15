@@ -4,6 +4,8 @@
 
 .card-title {
   font-weight: 200px;
+  color: darkslategrey;
+  opacity: 0.8;
 }
 
 .card .card-content p.body {

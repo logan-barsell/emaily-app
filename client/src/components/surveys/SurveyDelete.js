@@ -2,12 +2,7 @@ import './surveyDelete.css';
 
 import React, { Component } from "react";
 import M from 'materialize-css';
-import { useNavigate } from 'react-router-dom';
 
-// const RootFunction = ({ survey }) => {
-//   const navigation = useNavigate();
-//   return <SurveyDelete navigation={navigation} survey={survey} />;
-// };
 
 class SurveyDelete extends Component {
 
