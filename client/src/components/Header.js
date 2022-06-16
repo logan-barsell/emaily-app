@@ -13,7 +13,7 @@ class Header extends Component {
     M.Sidenav.init(this.Sidenav, options);
   }
 
-  renderContent() {
+  renderNavContent() {
     switch (this.props.auth) {
       case null:
         return;
@@ -21,11 +21,32 @@ class Header extends Component {
         return <li><a href="/auth/google">Login With Google</a></li>
       default:
         return [
-          <li key='1'><Payments /></li>,
           <li key='3' style={{ margin: '0 10px' }}>
-            Credits: {this.props.auth.credits}
+            <a className="credits">Credits: {this.props.auth.credits}</a>
           </li>,
+          <li key='1'><Payments /></li>,
+
           <li key='2'><a href="/api/logout">Log Out</a></li>
+        ]
+    }
+  }
+
+  renderSideBar() {
+    switch (this.props.auth) {
+      case null:
+        return;
+      case false:
+        return <li><a href="/auth/google">Login With Google</a></li>
+      default:
+        return [
+
+          <li key='3' className="center" style={{ margin: '0 10px' }}>
+            <a className="credits">
+              Credits: {this.props.auth.credits}
+            </a>
+          </li>,
+          <li key='1' className="center"><Payments /></li>,
+          <li key='2'><a className="logout" href="/api/logout">Log Out</a></li>
         ]
     }
   }
@@ -44,12 +65,13 @@ class Header extends Component {
             </Link>
             <a href="#" data-target="sideNav" className="right sidenav-trigger hide-on-med-and-up"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-small-only">
-              {this.renderContent()}
+              {this.renderNavContent()}
             </ul>
           </div>
         </nav>
         <ul ref={Sidenav => { this.Sidenav = Sidenav }} className="sidenav" id="sideNav">
-          {this.renderContent()}
+          <li><a className="brand-logo">iSurveyU</a></li>
+          {this.renderSideBar()}
         </ul>
       </>
     )
