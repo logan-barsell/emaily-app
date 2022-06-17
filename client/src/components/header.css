@@ -9,6 +9,10 @@
   font-weight: 400;
 }
 
+nav button {
+  margin-right: 10px;
+}
+
 .sidenav {
   background-color: cadetblue;
 }

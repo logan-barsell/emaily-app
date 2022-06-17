@@ -32,3 +32,28 @@ i.delete:hover {
   opacity: 0.7;
   transition: 100ms;
 }
+
+.card
+  .card-action
+  a.yes:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  color: teal;
+}
+
+.card
+  .card-action
+  a.no:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  color: red;
+}
+
+.no-data {
+  margin-bottom: 22px;
+}
+
+.no-data h5 {
+  color: darkslategray;
+}
+
+.no-data p {
+  color: darkslategrey;
+  opacity: 0.7;
+}

@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
 import SurveyDelete from './SurveyDelete';
+import { PieChart } from 'react-minimal-pie-chart';
 
 class SurveyList extends Component {
   componentDidMount() {
@@ -29,8 +30,35 @@ class SurveyList extends Component {
             </div>
           </div>
           <div className="card-action">
-            <a>Yes: {survey.yes}</a>
-            <a>No: {survey.no}</a>
+
+            {
+              survey.no && survey.yes ?
+                <PieChart
+                  data={[
+                    { title: 'Yes', value: 2, color: 'teal' },
+                    { title: 'No', value: 1, color: 'red' }
+                  ]}
+                  label={({ dataEntry }) => `${Math.round(dataEntry.percentage)} %`}
+                  labelPosition={110}
+                  labelStyle={{ fontSize: '8px', color: 'darkslategrey' }}
+                  lengthAngle={360}
+                  segmentsShift={0}
+                  lineWidth={20}
+                  paddingAngle={0}
+                  radius={40}
+                  startAngle={90}
+                  viewBoxSize={[100, 100]}
+                  style={{ height: '150px' }}
+
+                />
+                :
+                <div className="no-data">
+                  <h5>No data yet!</h5>
+                  <p>Waiting on survey results...</p>
+                </div>
+            }
+            <a className="yes">Yes: {survey.yes}</a>
+            <a className="no">No: {survey.no}</a>
           </div>
         </div>
       );
