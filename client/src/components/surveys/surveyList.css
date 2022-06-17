@@ -18,6 +18,27 @@
   font-weight: 200;
 }
 
+.survey .card-content {
+  overflow: auto;
+}
+
+.card .card-content .dates p {
+  margin: 0px 3px;
+}
+
+.dates p span {
+  font-weight: 300;
+}
+
+@media screen and (max-width: 400px) {
+  .dates p.left {
+    clear: right;
+  }
+  .dates p.right {
+    float: left !important;
+  }
+}
+
 .card-action {
   text-align: center;
 }
@@ -47,7 +68,7 @@ i.delete:hover {
   margin-bottom: 22px;
 }
 
-.no-data h5 {
+.no-data h6 {
   color: darkslategray;
 }
 

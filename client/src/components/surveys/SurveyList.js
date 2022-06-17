@@ -9,7 +9,6 @@ import { PieChart } from 'react-minimal-pie-chart';
 class SurveyList extends Component {
   componentDidMount() {
     this.props.fetchSurveys();
-    console.log(this.props.surveys)
   }
 
   noSurveys() {
@@ -24,7 +23,7 @@ class SurveyList extends Component {
   renderSurveys() {
     return this.props.surveys.reverse().map(survey => {
       return (
-        <div className="card darken-1" key={survey._id}>
+        <div className="survey card darken-1" key={survey._id}>
           <div className="card-content">
             <span className="card-title survey-title">
               {survey.title}:
@@ -32,9 +31,9 @@ class SurveyList extends Component {
             </span>
             <p className="body">{survey.body}</p>
             <div className="dates">
-              <p className="left">Sent on: {new Date(survey.dateSent).toLocaleDateString()}</p>
+              <p className="left"><span>Sent on:</span> {new Date(survey.dateSent).toLocaleDateString()}</p>
               <p className="right">
-                Last responded:
+                <span>Last responded:</span>
                 {survey.lastResponded ? new Date(survey.lastResponded).toLocaleDateString() : ' Never'}</p>
             </div>
           </div>
@@ -62,7 +61,7 @@ class SurveyList extends Component {
                 />
                 :
                 <div className="no-data">
-                  <h5>No data yet!</h5>
+                  <h6>No data yet!</h6>
                   <p>Waiting on survey results...</p>
                 </div>
             }
@@ -77,7 +76,7 @@ class SurveyList extends Component {
   render() {
     return (
       <div>
-        {this.surveys ? this.renderSurveys() : this.noSurveys()}
+        {this.props.surveys.length ? this.renderSurveys() : this.noSurveys()}
       </div>
     );
   }

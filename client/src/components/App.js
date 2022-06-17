@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Dashboard from './Dashboard';
 import Landing from './Landing';
 import SurveyNew from './surveys/SurveyNew';
+import Thankyou from './Thankyou';
 
 class App extends Component {
   componentDidMount() {
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path="/" element={this.props.auth ? <Dashboard /> : <Landing />} exact />
             <Route path="/surveys" element={<Dashboard />} exact />
             <Route path="/surveys/new" element={<SurveyNew />} />
+            <Route path="/thankyou" element={<Thankyou /> } />
           </Routes>
           <Footer />
         </div>

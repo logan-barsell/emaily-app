@@ -1,5 +1,6 @@
 .form-review {
-  margin: 50px auto;
+  margin-top: 25px;
+  overflow: auto;
 }
 
 .form-review h5 {
@@ -20,4 +21,14 @@
 label {
   font-size: 16px;
   color: white;
+}
+
+.form-review button {
+  margin: 5px;
+}
+
+@media screen and (max-width: 345px) {
+  .form-review button.right {
+    float: left !important;
+  }
 }

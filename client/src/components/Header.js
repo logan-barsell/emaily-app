@@ -36,7 +36,7 @@ class Header extends Component {
       case null:
         return;
       case false:
-        return <li><a href="/auth/google">Login With Google</a></li>
+        return <li className="google-login"><a href="/auth/google">Login With Google</a></li>
       default:
         return [
 
@@ -70,7 +70,11 @@ class Header extends Component {
           </div>
         </nav>
         <ul ref={Sidenav => { this.Sidenav = Sidenav }} className="sidenav" id="sideNav">
-          <li><a className="brand-logo">iSurveyU</a></li>
+          <li>
+            <a className="brand-logo">iSurveyU</a>
+            <i className="material-icons right sidenav-close">close</i>
+          </li>
+          
           {this.renderSideBar()}
         </ul>
       </>

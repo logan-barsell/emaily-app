@@ -1,3 +1,7 @@
+nav {
+  background-color: indianred;
+}
+
 .brand-logo {
   font-weight: 900;
   text-shadow: 2px 0px 0px teal;
@@ -15,6 +19,16 @@ nav button {
 
 .sidenav {
   background-color: cadetblue;
+}
+
+.sidenav-trigger i {
+  text-shadow: 1px 1px 0px teal;
+}
+
+.sidenav-trigger i:hover {
+  opacity: 0.7;
+  text-shadow: 3px 3px 0px teal;
+  transition: 250ms;
 }
 
 .sidenav li > a.logout {
@@ -41,4 +55,40 @@ nav button {
 .sidenav li > a.credits {
   color: white;
   background-color: transparent;
+}
+
+@media screen and (max-width: 300px) {
+  .sidenav {
+    width: 100%;
+  }
+}
+
+.sidenav-close {
+  position: absolute;
+  top: 11px;
+  right: 9px;
+  color: white;
+  text-shadow: 1px 0px 0px darkslategrey;
+  cursor: pointer;
+}
+
+.sidenav-close:hover {
+  opacity: 0.7;
+  text-shadow: 3px 3px 0px darkslategrey;
+  transition: 250ms ease;
+}
+
+.sidenav .google-login {
+  margin-top: 10px;
+}
+
+.sidenav .google-login a {
+  background-color: indianred;
+  color: white;
+}
+
+.sidenav .google-login a:hover {
+  opacity: 0.9;
+  background-color: indianred;
+  transition: 200ms;
 }

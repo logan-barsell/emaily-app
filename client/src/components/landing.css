@@ -16,3 +16,16 @@
   margin-right: 13px;
   margin-bottom: -4px;
 }
+
+@media screen and (max-width: 309px){
+  .google.btn-large {
+    height: 36px;
+    line-height: 35px;
+    padding: 0px 12px;
+    font-size: 10px;
+  }
+  .googleBtn {
+    margin-bottom: -6px;
+    margin-right: 8px;
+  }
+}

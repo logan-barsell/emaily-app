@@ -16,7 +16,7 @@ const Landing = () => {
           <a
             href="/auth/google"
             id="download-button"
-            className="btn-large waves-effect waves-light teal">
+            className="google btn-large waves-effect waves-light teal truncate">
             <img className="googleBtn" src="./google.png" height="20px" width="20px" alt="google icon" />
             Login with Google
           </a>
