@@ -12,15 +12,24 @@ class SurveyList extends Component {
     console.log(this.props.surveys)
   }
 
+  noSurveys() {
+    return (
+      <div className="no-surveys center">
+        <h5>You have no surveys!</h5>
+        <a href="/surveys/new" className="btn btn-large red">Create Survey <i className="material-icons">add</i></a>
+      </div>
+    );
+  }
+
   renderSurveys() {
     return this.props.surveys.reverse().map(survey => {
       return (
         <div className="card darken-1" key={survey._id}>
           <div className="card-content">
-            <span className="card-title">{survey.title}:
+            <span className="card-title survey-title">
+              {survey.title}:
               <SurveyDelete survey={survey} />
             </span>
-
             <p className="body">{survey.body}</p>
             <div className="dates">
               <p className="left">Sent on: {new Date(survey.dateSent).toLocaleDateString()}</p>
@@ -68,7 +77,7 @@ class SurveyList extends Component {
   render() {
     return (
       <div>
-        {this.renderSurveys()}
+        {this.surveys ? this.renderSurveys() : this.noSurveys()}
       </div>
     );
   }

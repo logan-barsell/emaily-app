@@ -1,4 +1,8 @@
-h5 {
+.form-review {
+  margin: 50px auto;
+}
+
+.form-review h5 {
   color: white;
   font-weight: 200;
 }
