@@ -2,6 +2,7 @@ import './surveyList.css';
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchSurveys } from '../../actions';
 import SurveyDelete from './SurveyDelete';
 import { PieChart } from 'react-minimal-pie-chart';
@@ -15,7 +16,7 @@ class SurveyList extends Component {
     return (
       <div className="no-surveys center">
         <h5>You have no surveys!</h5>
-        <a href="/surveys/new" className="btn btn-large red">Create Survey <i className="material-icons">add</i></a>
+        <Link to="/surveys/new" className="btn btn-large red">Create Survey <i className="material-icons">add</i></Link>
       </div>
     );
   }
