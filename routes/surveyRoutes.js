@@ -12,7 +12,7 @@ const Survey = mongoose.model('surveys');
 
 module.exports = app => {
 
-  app.get('/api/deleteSurvey/:id', async (req, res) => {
+  app.get('/api/deleteSurvey/:id', requireLogin, async (req, res) => {
     await Survey.deleteOne({ _id: req.params.id });
     res.redirect('/surveys');
   });

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SurveyList from './surveys/SurveyList';
+import requireAuth from './requireAuth';
 
 const Dashboard = () => {
   return (
@@ -16,4 +17,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default requireAuth(Dashboard);
