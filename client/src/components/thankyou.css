@@ -1,0 +1,16 @@
+.thankyou {
+  margin: 60px auto;
+}
+
+.thankyou h4 {
+  font-weight: 200;
+}
+
+.thankyou h5 {
+  color: powderblue;
+}
+
+.thankyou .material-icons {
+  font-size: 50px;
+  color: darkslategrey;
+}
