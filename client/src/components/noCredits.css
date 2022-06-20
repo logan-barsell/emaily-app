@@ -1,0 +1,11 @@
+.no-credits h4 {
+  color: darkslategray;
+}
+
+.no-credits p {
+  color: indianred;
+}
+
+.no-credits .modal .btn {
+  margin: auto;
+}
