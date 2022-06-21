@@ -7,7 +7,7 @@ class Footer extends Component {
   renderSteps() {
     return !this.props.auth ?
       (
-        <div className="col l6 s12 center steps">
+        <div className="col s12 center steps">
           <h5 className="white-text">It's simple and easy:</h5>
           <div className="stepsSub grey-text text-lighten-4">
             <div className="number">1</div><p> Fill out a survey form</p>
@@ -26,14 +26,14 @@ class Footer extends Component {
         <div className="container">
           <div className="row">
             {this.renderSteps()}
-            <div className="col l3 s12 icon-attr">
+            <div className="col s12 icon-attr">
               <h5 className="white-text">iSurveyU</h5>
               <ul>
                 <li><a>More info on GitHub <i className="material-icons tiny">arrow_forward</i></a></li>
                 <li>Other projects  <i className="material-icons tiny">arrow_forward</i></li>
               </ul>
             </div>
-            <div className="col l3 s12 icon-attr">
+            <div className="col s12 icon-attr">
               <h5 className="white-text">Attributes</h5>
               <ul>
                 <li>
