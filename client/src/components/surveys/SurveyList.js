@@ -58,8 +58,8 @@ class SurveyList extends Component {
               survey.no || survey.yes ?
                 <PieChart
                   data={[
-                    { title: 'Yes', value: 2, color: 'teal' },
-                    { title: 'No', value: 1, color: 'red' }
+                    { title: 'Yes', value: survey.yes, color: 'teal' },
+                    { title: 'No', value: survey.no, color: 'red' }
                   ]}
                   label={({ dataEntry }) => `${Math.round(dataEntry.percentage)} %`}
                   labelPosition={110}
