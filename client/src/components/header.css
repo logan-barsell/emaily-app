@@ -2,7 +2,7 @@ nav {
   background-color: indianred;
 }
 
-.brand-logo {
+nav .brand-logo {
   font-weight: 900;
   text-shadow: 2px 0px 0px teal;
   padding: 0px 13px;

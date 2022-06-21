@@ -6,17 +6,31 @@ import { Link } from 'react-router-dom';
 import { fetchSurveys } from '../../actions';
 import SurveyDelete from './SurveyDelete';
 import { PieChart } from 'react-minimal-pie-chart';
+import NoCredits from '../NoCredits';
 
 class SurveyList extends Component {
   componentDidMount() {
     this.props.fetchSurveys();
   }
 
+  renderAddButton() {
+    if (this.props.auth) {
+      return this.props.auth.credits ?
+        <Link
+          to="/surveys/new"
+          className="btn btn-large red"
+        >Create Survey <i className="material-icons">add</i>
+        </Link> :
+        <NoCredits />
+    }
+  }
+
   noSurveys() {
     return (
       <div className="no-surveys center">
         <h5>You have no surveys!</h5>
-        <Link to="/surveys/new" className="btn btn-large red">Create Survey <i className="material-icons">add</i></Link>
+        {this.renderAddButton()}
+
       </div>
     );
   }
@@ -41,7 +55,7 @@ class SurveyList extends Component {
           <div className="card-action">
 
             {
-              survey.no && survey.yes ?
+              survey.no || survey.yes ?
                 <PieChart
                   data={[
                     { title: 'Yes', value: 2, color: 'teal' },
@@ -83,8 +97,8 @@ class SurveyList extends Component {
   }
 }
 
-function mapStateToProps({ surveys }) {
-  return { surveys };
+function mapStateToProps({ surveys, auth }) {
+  return { surveys, auth };
 }
 
 export default connect(mapStateToProps, { fetchSurveys })(SurveyList);

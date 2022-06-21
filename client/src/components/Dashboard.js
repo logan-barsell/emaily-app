@@ -20,7 +20,7 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div className="container" style={{ margin: "28px auto" }}>
+      <div className="container" style={{ margin: "45px auto" }}>
         <SurveyList />
         <div className="fixed-action-btn">
           {/* <Link to="/surveys/new" className="btn-floating btn-large red">
