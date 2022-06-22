@@ -2,8 +2,8 @@
   background: rgba(255, 255, 255, 0.5);
 }
 
-.survey-title {
-  font-weight: 200px;
+.card .card-title.survey-title {
+  font-weight: 700;
   color: rgb(73, 105, 105);
 }
 .card .card-content p.body {
@@ -52,6 +52,10 @@ i.delete:hover {
   transition: 100ms;
 }
 
+.card .card-action a {
+  font-weight: 900;
+}
+
 .card
   .card-action
   a.yes:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
@@ -78,7 +82,7 @@ i.delete:hover {
 }
 
 .no-surveys {
-  margin: 50px auto;
+  margin: 150px auto;
   color: white;
 }
 

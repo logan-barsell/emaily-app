@@ -29,8 +29,8 @@ class Footer extends Component {
             <div className="col s12 icon-attr">
               <h5 className="white-text">iSurveyU</h5>
               <ul>
-                <li><a>More info on GitHub <i className="material-icons tiny">arrow_forward</i></a></li>
-                <li>Other projects  <i className="material-icons tiny">arrow_forward</i></li>
+                <li><a target="_blank" href="https://github.com/logan-barsell/emaily-app">More info on GitHub <i className="material-icons tiny">arrow_forward</i></a></li>
+                <li><a target="_blank" href=" http://www.loganbarsell.com">Other projects  <i className="material-icons tiny">arrow_forward</i></a></li>
               </ul>
             </div>
             <div className="col s12 icon-attr">
