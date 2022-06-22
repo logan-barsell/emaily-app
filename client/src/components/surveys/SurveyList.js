@@ -21,7 +21,15 @@ class SurveyList extends Component {
           className="btn btn-large red"
         >Create Survey <i className="material-icons">add</i>
         </Link> :
-        <NoCredits />
+        <>
+          <a
+            href="#!"
+            data-target="no-credits"
+            className="btn btn-large red modal-trigger"
+          >Create Survey <i className="material-icons">add</i>
+          </a>
+          <NoCredits />
+        </>
     }
   }
 

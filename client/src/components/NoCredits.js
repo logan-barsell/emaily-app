@@ -19,9 +19,9 @@ class NoCredits extends Component {
   render() {
     return (
       <div className="no-credits">
-        <a href="#!" data-target={this.modalId} className="modal-trigger btn-floating btn-large red">
+        {/* <a href="#!" data-target={this.modalId} className="modal-trigger btn-floating btn-large red">
           <i className="large material-icons">add</i>
-        </a>
+        </a> */}
 
         <div id={this.modalId} className="modal" ref={Modal2 => { this.Modal2 = Modal2 }}>
           <div className="modal-content">

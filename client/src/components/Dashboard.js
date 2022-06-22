@@ -14,7 +14,12 @@ class Dashboard extends Component {
         <Link to="/surveys/new" className="btn-floating btn-large red">
           <i className="large material-icons">add</i>
         </Link> :
-        <NoCredits />
+        <>
+          <a href="#!" data-target="no-credits" className="modal-trigger btn-floating btn-large red">
+            <i className="large material-icons">add</i>
+          </a>
+          <NoCredits />
+        </>
     }
   }
 
