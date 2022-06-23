@@ -56,8 +56,8 @@ class SurveyList extends Component {
             <div className="dates">
               <p className="left"><span>Sent on:</span> {new Date(survey.dateSent).toLocaleDateString()}</p>
               <p className="right">
-                <span>Last responded:</span>
-                {survey.lastResponded ? new Date(survey.lastResponded).toLocaleDateString() : ' Never'}</p>
+                <span>Last responded: </span>
+                {survey.lastResponded ? new Date(survey.lastResponded).toLocaleDateString() : 'Never'}</p>
             </div>
           </div>
           <div className="card-action">
@@ -88,6 +88,10 @@ class SurveyList extends Component {
                   <p>Waiting on survey results...</p>
                 </div>
             }
+
+          </div>
+
+          <div className="card-action YnN">
             <a className="yes">Yes: {survey.yes}</a>
             <a className="no">No: {survey.no}</a>
           </div>
