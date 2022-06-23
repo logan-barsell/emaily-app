@@ -60,6 +60,7 @@ i.delete:hover {
   .card-action
   a.yes:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
   color: teal;
+  margin-right: 0px;
 }
 
 .card
